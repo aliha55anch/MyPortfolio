@@ -32,7 +32,10 @@ header {
   position: relative;
   z-index: 100;
   font-family: 'Poppins', sans-serif;
+  animation: fadeDown 1s ease forwards;
+  opacity: 0;
 }
+
 
 /* ===== Logo ===== */
 .logo {
@@ -155,12 +158,10 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   }
 
-  /* Show menu when checkbox is checked */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 
-  /* Animate Hamburger to "X" */
   #menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -170,8 +171,6 @@ header {
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
-
-  /* Make links larger for mobile */
   .nav-links a {
     font-size: 1.1rem;
     padding: 10px 0;
@@ -179,7 +178,10 @@ header {
 
 }
 
-
+@keyframes fadeDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
 /* ===== About Me Section ===== */
 .about-section {
