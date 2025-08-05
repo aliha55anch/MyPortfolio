@@ -5,6 +5,44 @@
   box-sizing: border-box;
 }
 
+/* ===== Preloader ===== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hidePreloader 1s forwards; 
+  animation-delay: 0.5s;
+}
+
+.spinner {
+  width: 150px;
+  height: 150px;
+  border: 15px solid #222;
+  border-top: 15px solid #ff4c60;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Spinner Rotation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide Preloader */
+@keyframes hidePreloader {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0d0d0d; /* Premium dark background */
@@ -183,6 +221,7 @@ header {
   to { transform: translateY(0); opacity: 1; }
 }
 
+
 /* ===== About Me Section ===== */
 .about-section {
   background: #0d0d0d; /* Match main background */
@@ -190,7 +229,10 @@ header {
   padding: 100px 5% 80px;
   display: flex;
   justify-content: center;
+
 }
+
+
 
 .about-container {
   display: flex;
@@ -204,6 +246,13 @@ header {
 /* Left Side Content */
 .about-content {
   flex: 1;
+  animation: fadeSide 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSide {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 .about-content h1 {
@@ -300,6 +349,12 @@ header {
   flex: 1;
   display: flex;
   justify-content: center;
+  animation: fadeRight 2s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 .about-image img {
@@ -337,6 +392,7 @@ header {
     justify-content: center;
   }
 }
+
 
 /* ===== My Services / Expertise Section ===== */
 .section.white {
