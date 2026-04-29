@@ -467,11 +467,34 @@ header {
 }
 
 .skill-card i,
-.skill-card .cpp-icon {
+.skill-card svg,
+.skill-card .cpp-icon,
+.skill-card .tailwind-icon,
+.skill-card .flask-icon,
+.skill-card .vercel-icon {
   font-size: 2.8rem;
   color: #fff;
   margin-bottom: 10px;
   opacity: 0.8;
+}
+
+.skill-card svg {
+  width: 2.8rem;
+  height: 2.8rem;
+  fill: currentColor;
+}
+
+.skill-card svg path {
+  fill: currentColor;
+}
+
+.fab.fa-github,
+.skill-card:hover .fab.fa-github {
+  color: #fff;
+}
+
+.skill-card:hover .fab.fa-github {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
 
 .skill-card p {
@@ -489,7 +512,11 @@ header {
 }
 
 .skill-card:hover i,
-.skill-card:hover .cpp-icon {
+.skill-card:hover svg,
+.skill-card:hover .cpp-icon,
+.skill-card:hover .tailwind-icon,
+.skill-card:hover .flask-icon,
+.skill-card:hover .vercel-icon {
   color: var(--brand-color);
   opacity: 1;
   filter: drop-shadow(0 0 10px var(--brand-color));
@@ -500,7 +527,7 @@ header {
 @media (max-width: 768px) {
   .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; }
   .skill-card { height: 130px; }
-  .skill-card i, .skill-card .cpp-icon { font-size: 2.2rem; }
+  .skill-card i, .skill-card .cpp-icon, .skill-card .tailwind-icon, .skill-card .flask-icon, .skill-card .vercel-icon { font-size: 2.2rem; }
 }
 
 @media (max-width: 480px) {
