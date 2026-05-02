@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const matches = selected === "all" || category === selected;
 
         if (matches) {
-          card.style.display = "block";
+          card.style.display = "";
           setTimeout(() => {
             card.style.opacity = "1";
             card.style.transform = "scale(1)";
@@ -85,6 +85,111 @@ document.addEventListener("DOMContentLoaded", () => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
+  });
+
+  // ===== Animated stat counters =====
+  const statNums = document.querySelectorAll(".stat-num[data-target]");
+
+  const animateCounter = (el) => {
+    const target = Number(el.dataset.target);
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const easeOutCubic = (progress) => 1 - Math.pow(1 - progress, 3);
+
+    const updateCounter = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const currentValue = Math.round(target * easeOutCubic(progress));
+
+      el.textContent = currentValue;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        el.textContent = target;
+      }
+    };
+
+    requestAnimationFrame(updateCounter);
+  };
+
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.45 }
+  );
+
+  statNums.forEach((el) => {
+    counterObserver.observe(el);
+  });
+
+  // ===== Animated skill bars =====
+  const skillProgressCards = document.querySelectorAll(".skill-progress-card[data-level]");
+
+  const animateSkillBar = (card) => {
+    const fill = card.querySelector(".skill-progress-fill");
+    const value = card.querySelector(".skill-progress-value");
+    const target = Number(card.dataset.level);
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const easeOutQuart = (progress) => 1 - Math.pow(1 - progress, 4);
+
+    const updateBar = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutQuart(progress);
+      const currentValue = Math.round(target * easedProgress);
+
+      fill.style.width = `${target}%`;
+      value.textContent = `${currentValue}%`;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateBar);
+      } else {
+        value.textContent = `${target}%`;
+      }
+    };
+
+    requestAnimationFrame(updateBar);
+  };
+
+  const skillBarsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        animateSkillBar(entry.target);
+        skillBarsObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  skillProgressCards.forEach((card) => {
+    const fill = card.querySelector(".skill-progress-fill");
+    const value = card.querySelector(".skill-progress-value");
+
+    if (fill) {
+      fill.style.width = "0%";
+    }
+
+    if (value) {
+      value.textContent = "0%";
+    }
+
+    skillBarsObserver.observe(card);
   });
 
 });
