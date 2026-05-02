@@ -21,7 +21,7 @@
 
     <header>
       <nav class="navbar">
-        <a href="#about" class="logo">Muhammad Ali Hassan</a>
+        <a href="#about" class="logo">&lt;Muhammad Ali Hassan/&gt;</a>
 
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger">
@@ -46,7 +46,7 @@
     <section id="about" class="about-section">
       <div class="about-container">
         <div class="about-content">
-          <h1>Hi, I'm <span>M. Ali Hassan</span></h1>
+          <h1>Hi, I'm <span>Muhammad Ali Hassan</span></h1>
 
           <h3 class="roles">
             <span>Frontend Web Developer</span>
@@ -60,10 +60,10 @@
           <div class="about-buttons">
             <a href="/MY CV.pdf" class="btn" download>My CV</a>
             <div class="social-links">
-              <a href="https://www.facebook.com/aliha55anch/"><i class="fab fa-facebook"></i></a>
-              <a href="https://www.linkedin.com/in/aliha55anch"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/aliha55anch/"><i class="fab fa-github"></i></a>
-              <a href="https://www.instagram.com/ali_ha55an_ch"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/aliha55anch/" style="--social-color: #1877f2;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/in/aliha55anch" style="--social-color: #0a66c2;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/aliha55anch/" style="--social-color: #f5f5f5;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/ali_ha55an_ch" style="--social-color: #e4405f;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -83,21 +83,21 @@
         <div class="stat-divider"></div>
         <div class="stat-item">
           <div class="stat-num-wrap">
-            <span class="stat-num" data-target="7">0</span><span class="stat-suffix">+</span>
+            <span class="stat-num" data-target="4">0</span><span class="stat-suffix">+</span>
           </div>
           <p>Projects Built</p>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
           <div class="stat-num-wrap">
-            <span class="stat-num" data-target="1">0</span><span class="stat-suffix">+</span>
+            <span class="stat-num" data-target="1.5">0</span><span class="stat-suffix">+</span>
           </div>
           <p>Year Experience</p>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
           <div class="stat-num-wrap">
-            <span class="stat-num" data-target="12">0</span><span class="stat-suffix">+</span>
+            <span class="stat-num" data-target="10">0</span><span class="stat-suffix">+</span>
           </div>
           <p>Technologies</p>
         </div>
@@ -161,8 +161,11 @@
     <!-- My Skills Section -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">My Skills</h2>
-        <p class="section-subtitle">I turn your ideas into beautiful and functional projects with these skills.</p>
+        <div class="section-heading reveal">
+          <span class="section-kicker">Core Stack</span>
+          <h2 class="section-title">My Skills</h2>
+          <p class="section-subtitle">I turn your ideas into beautiful and functional projects with these skills.</p>
+        </div>
 
         <div class="skills-grid">
 
@@ -247,9 +250,9 @@
           </div>
 
           <div class="skill-bars">
-            <div class="skill-progress-card" data-level="95">
+            <div class="skill-progress-card" data-level="95" style="--skill-color: #E34F26;">
               <div class="skill-progress-head">
-                <span>HTML5</span>
+                <span class="skill-progress-title"><i class="devicon-html5-plain colored"></i>HTML5</span>
                 <span class="skill-progress-value">95%</span>
               </div>
               <p class="skill-progress-note">Semantic structure, clean layouts, and accessible page foundations.</p>
@@ -258,9 +261,9 @@
               </div>
             </div>
 
-            <div class="skill-progress-card" data-level="92">
+            <div class="skill-progress-card" data-level="92" style="--skill-color: #1572B6;">
               <div class="skill-progress-head">
-                <span>CSS3</span>
+                <span class="skill-progress-title"><i class="devicon-css3-plain colored"></i>CSS3</span>
                 <span class="skill-progress-value">92%</span>
               </div>
               <p class="skill-progress-note">Responsive layouts, animations, spacing systems, and polished UI styling.</p>
@@ -269,10 +272,9 @@
               </div>
             </div>
 
-            
-            <div class="skill-progress-card" data-level="86">
+            <div class="skill-progress-card" data-level="86" style="--skill-color: #7952B3;">
               <div class="skill-progress-head">
-                <span>Bootstrap</span>
+                <span class="skill-progress-title"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
                 <span class="skill-progress-value">86%</span>
               </div>
               <p class="skill-progress-note">Fast page building with reusable responsive components and utility patterns.</p>
@@ -280,10 +282,10 @@
                 <div class="skill-progress-fill"></div>
               </div>
             </div>
-            
-            <div class="skill-progress-card" data-level="74">
+
+            <div class="skill-progress-card" data-level="74" style="--skill-color: #06B6D4;">
               <div class="skill-progress-head">
-                <span>Tailwind</span>
+                <span class="skill-progress-title"><i class="devicon-tailwindcss-plain colored"></i>Tailwind</span>
                 <span class="skill-progress-value">74%</span>
               </div>
               <p class="skill-progress-note">Utility-first workflows for modern, flexible, and maintainable interfaces.</p>
@@ -291,10 +293,10 @@
                 <div class="skill-progress-fill"></div>
               </div>
             </div>
-            
-            <div class="skill-progress-card" data-level="70">
+
+            <div class="skill-progress-card" data-level="70" style="--skill-color: #F7DF1E;">
               <div class="skill-progress-head">
-                <span>JavaScript</span>
+                <span class="skill-progress-title"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
                 <span class="skill-progress-value">70%</span>
               </div>
               <p class="skill-progress-note">Interactive components, DOM logic, filtering, sliders, and smooth front-end behavior.</p>
@@ -303,9 +305,9 @@
               </div>
             </div>
 
-            <div class="skill-progress-card" data-level="80">
+            <div class="skill-progress-card" data-level="80" style="--skill-color: #21759B;">
               <div class="skill-progress-head">
-                <span>WordPress</span>
+                <span class="skill-progress-title"><i class="devicon-wordpress-plain colored"></i>WordPress</span>
                 <span class="skill-progress-value">80%</span>
               </div>
               <p class="skill-progress-note">Business websites, customization, content management, and WooCommerce setup.</p>
@@ -314,9 +316,9 @@
               </div>
             </div>
 
-            <div class="skill-progress-card" data-level="52">
+            <div class="skill-progress-card" data-level="52" style="--skill-color: #f5f5f5;">
               <div class="skill-progress-head">
-                <span>Flask</span>
+                <span class="skill-progress-title"><i class="devicon-flask-original"></i>Flask</span>
                 <span class="skill-progress-value">52%</span>
               </div>
               <p class="skill-progress-note">Beginner backend routing, templates, and lightweight Python web projects.</p>
@@ -325,9 +327,9 @@
               </div>
             </div>
 
-            <div class="skill-progress-card" data-level="51">
+            <div class="skill-progress-card" data-level="51" style="--skill-color: #339933;">
               <div class="skill-progress-head">
-                <span>Node.js</span>
+                <span class="skill-progress-title"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
                 <span class="skill-progress-value">51%</span>
               </div>
               <p class="skill-progress-note">Learning server-side basics, packages, and simple JavaScript runtime workflows.</p>
@@ -336,6 +338,49 @@
               </div>
             </div>
 
+            <div class="skill-progress-card" data-level="78" style="--skill-color: #f5f5f5;">
+              <div class="skill-progress-head">
+                <span class="skill-progress-title"><i class="devicon-github-original colored"></i>GitHub</span>
+                <span class="skill-progress-value">78%</span>
+              </div>
+              <p class="skill-progress-note">Version control, repository workflow, and clean collaboration for project delivery.</p>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-card" data-level="68" style="--skill-color: #00AD9F;">
+              <div class="skill-progress-head">
+                <span class="skill-progress-title"><i class="devicon-netlify-plain colored"></i>Netlify</span>
+                <span class="skill-progress-value">68%</span>
+              </div>
+              <p class="skill-progress-note">Fast deployment workflows for static websites, previews, and smooth hosting setup.</p>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-card" data-level="66" style="--skill-color: #f5f5f5;">
+              <div class="skill-progress-head">
+                <span class="skill-progress-title"><i class="devicon-vercel-original"></i>Vercel</span>
+                <span class="skill-progress-value">66%</span>
+              </div>
+              <p class="skill-progress-note">Modern frontend deployment, quick publishing, and performance-friendly hosting setup.</p>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-card" data-level="72" style="--skill-color: #F24E1E;">
+              <div class="skill-progress-head">
+                <span class="skill-progress-title"><i class="devicon-figma-plain colored"></i>Figma</span>
+                <span class="skill-progress-value">72%</span>
+              </div>
+              <p class="skill-progress-note">Wireframing, layout planning, and translating interface ideas into usable designs.</p>
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -350,15 +395,10 @@
           <p class="section-subtitle">A cleaner presentation of selected builds, experiments, and real client-focused work.</p>
         </div>
 
-        <div class="filter-container">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web & Full Stack</button>
-        </div>
-
         <div class="projects-grid">
           <div class="project-card reveal" data-category="web">
             <div class="project-card-top">
-              <span class="project-badge">WorldPress</span>
+              <span class="project-badge">WordPress</span>
               <span class="project-index">01</span>
             </div>
             <div class="project-image">
@@ -501,6 +541,11 @@
     <!-- Education Section -->
     <section id="education" class="section">
       <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Education</span>
+          <h2 class="section-title">My Academic <span>Pathway</span></h2>
+          <p class="section-subtitle">A journey of continuous learning and excellence.</p>
+        </div>
         <h2 class="section-title">🎓 My Academic <span>Pathway</span></h2>
         <p class="section-subtitle">A journey of continuous learning and excellence.</p>
 
@@ -577,35 +622,43 @@
 
     <!-- Contact Me Section -->
     <section id="contact" class="section">
-      <div class="container contact-container">
-        <div class="contact-message reveal">
-          <h2>Let's <span>work together!</span></h2>
-          <p>
-            I design modern, user-friendly websites and bring ideas to life
-            with clean, functional code. Let's collaborate to turn your vision
-            into a digital reality!
-          </p>
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Contact</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">Ready to build something modern, useful, and beautifully crafted for the web.</p>
         </div>
 
-        <div class="contact-info">
-          <div class="info-item reveal">
-            <div class="info-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <p><strong>+92 302 6872793</strong></p>
-            </div>
+        <div class="contact-container">
+          <div class="contact-message reveal">
+            <h2>Let's <span>work together!</span></h2>
+            <p>
+              I design modern, user-friendly websites and bring ideas to life
+              with clean, functional code. Let's collaborate to turn your vision
+              into a digital reality!
+            </p>
           </div>
 
-          <div class="info-item reveal">
-            <div class="info-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <p><strong>alihassanchowdhary56@gmail.com</strong></p>
+          <div class="contact-info">
+            <div class="info-item reveal">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <p><strong>+92 302 6872793</strong></p>
+              </div>
             </div>
-          </div>
 
-          <div class="info-item reveal">
-            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <p><strong>Islamabad, Pakistan</strong></p>
+            <div class="info-item reveal">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <p><strong>alihassanchowdhary56@gmail.com</strong></p>
+              </div>
+            </div>
+
+            <div class="info-item reveal">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <p><strong>Islamabad, Pakistan</strong></p>
+              </div>
             </div>
           </div>
         </div>
@@ -619,10 +672,10 @@
           <p>© 2025 M. Ali Hassan | Crafting modern websites with passion.</p>
         </div>
         <div class="footer-social">
-          <a href="https://www.facebook.com/aliha55anch/"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.linkedin.com/in/aliha55anch/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/aliha55anch/"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/ali_ha55an_ch"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/aliha55anch/" style="--social-color: #1877f2;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/aliha55anch/" style="--social-color: #0a66c2;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/aliha55anch/" style="--social-color: #f5f5f5;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/ali_ha55an_ch" style="--social-color: #e4405f;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </footer>

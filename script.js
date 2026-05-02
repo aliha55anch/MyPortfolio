@@ -45,37 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== Project filter =====
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(".project-card");
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      // Update active button
-      filterBtns.forEach((b) => b.classList.remove("active"));
-      this.classList.add("active");
-
-      const selected = this.getAttribute("data-filter");
-
-      projectCards.forEach((card) => {
-        const category = card.getAttribute("data-category");
-        const matches = selected === "all" || category === selected;
-
-        if (matches) {
-          card.style.display = "";
-          setTimeout(() => {
-            card.style.opacity = "1";
-            card.style.transform = "scale(1)";
-          }, 10);
-        } else {
-          card.style.opacity = "0";
-          card.style.transform = "scale(0.95)";
-          setTimeout(() => { card.style.display = "none"; }, 300);
-        }
-      });
-    });
-  });
-
   // ===== Smooth scroll for anchor links =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
