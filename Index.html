@@ -13,8 +13,23 @@
 
 <body>
 
-  <div id="preloader">
-    <div class="spinner"></div>
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-orb">
+      <div class="loader-rings">
+        <span class="loader-ring loader-ring-one"></span>
+        <span class="loader-ring loader-ring-two"></span>
+        <span class="loader-ring loader-ring-three"></span>
+      </div>
+      <div class="loader-core">
+        <span class="loader-initials">MA</span>
+      </div>
+    </div>
+    <div class="loader-copy">
+      <p class="loader-subtitle">Loading Portfolio...</p>
+      <div class="loader-progress">
+        <span class="loader-progress-bar"></span>
+      </div>
+    </div>
   </div>
 
   <div class="content">
@@ -198,31 +213,19 @@
             <i class="devicon-javascript-plain colored"></i>
             <p>JavaScript</p>
           </div>
-
-          <div class="skill-card reveal" style="--brand-color: #181717;">
-            <div class="status-dot"></div>
-            <i class="devicon-github-original colored"></i>
-            <p>GitHub</p>
-          </div>
-
-          <div class="skill-card reveal" style="--brand-color: #339933;">
-            <div class="status-dot"></div>
-            <i class="devicon-nodejs-plain colored"></i>
-            <p>Node.js</p>
-          </div>
-
-          <div class="skill-card reveal" style="--brand-color: #000000;">
-            <div class="status-dot"></div>
-            <i class="devicon-flask-original"></i>
-            <p>Flask</p>
-          </div>
-
+          
           <div class="skill-card reveal" style="--brand-color: #21759B;">
             <div class="status-dot"></div>
             <i class="devicon-wordpress-plain colored"></i>
             <p>WordPress</p>
           </div>
 
+          <div class="skill-card reveal" style="--brand-color: #181717;">
+            <div class="status-dot"></div>
+            <i class="devicon-github-original colored"></i>
+            <p>GitHub</p>
+          </div>
+          
           <div class="skill-card reveal" style="--brand-color: #00AD9F;">
             <div class="status-dot"></div>
             <i class="devicon-netlify-plain colored"></i>
@@ -234,6 +237,19 @@
             <i class="devicon-vercel-original"></i>
             <p>Vercel</p>
           </div>
+          
+          <div class="skill-card reveal" style="--brand-color: #339933;">
+            <div class="status-dot"></div>
+            <i class="devicon-nodejs-plain colored"></i>
+            <p>Node.js</p>
+          </div>
+          
+          <div class="skill-card reveal" style="--brand-color: #000000;">
+            <div class="status-dot"></div>
+            <i class="devicon-flask-original"></i>
+            <p>Flask</p>
+          </div>
+          
 
           <div class="skill-card reveal" style="--brand-color: #F24E1E;">
             <div class="status-dot"></div>
@@ -246,7 +262,6 @@
         <div class="skill-levels reveal">
           <div class="skill-levels-header">
             <h3>Skill Proficiency</h3>
-            <p>A quick look at the tools I use most. Each percentage below is set directly in the HTML so it stays easy to update anytime.</p>
           </div>
 
           <div class="skill-bars">
@@ -255,7 +270,7 @@
                 <span class="skill-progress-title"><i class="devicon-html5-plain colored"></i>HTML5</span>
                 <span class="skill-progress-value">95%</span>
               </div>
-              <p class="skill-progress-note">Semantic structure, clean layouts, and accessible page foundations.</p>
+              <!-- <p class="skill-progress-note">Semantic structure, clean layouts, and accessible page foundations.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -266,7 +281,7 @@
                 <span class="skill-progress-title"><i class="devicon-css3-plain colored"></i>CSS3</span>
                 <span class="skill-progress-value">92%</span>
               </div>
-              <p class="skill-progress-note">Responsive layouts, animations, spacing systems, and polished UI styling.</p>
+              <!-- <p class="skill-progress-note">Responsive layouts, animations, spacing systems, and polished UI styling.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -277,7 +292,7 @@
                 <span class="skill-progress-title"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
                 <span class="skill-progress-value">86%</span>
               </div>
-              <p class="skill-progress-note">Fast page building with reusable responsive components and utility patterns.</p>
+              <!-- <p class="skill-progress-note">Fast page building with reusable responsive components and utility patterns.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -288,7 +303,7 @@
                 <span class="skill-progress-title"><i class="devicon-tailwindcss-plain colored"></i>Tailwind</span>
                 <span class="skill-progress-value">74%</span>
               </div>
-              <p class="skill-progress-note">Utility-first workflows for modern, flexible, and maintainable interfaces.</p>
+              <!-- <p class="skill-progress-note">Utility-first workflows for modern, flexible, and maintainable interfaces.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -299,7 +314,7 @@
                 <span class="skill-progress-title"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
                 <span class="skill-progress-value">70%</span>
               </div>
-              <p class="skill-progress-note">Interactive components, DOM logic, filtering, sliders, and smooth front-end behavior.</p>
+              <!-- <p class="skill-progress-note">Interactive components, DOM logic, filtering, sliders, and smooth front-end behavior.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -310,29 +325,7 @@
                 <span class="skill-progress-title"><i class="devicon-wordpress-plain colored"></i>WordPress</span>
                 <span class="skill-progress-value">80%</span>
               </div>
-              <p class="skill-progress-note">Business websites, customization, content management, and WooCommerce setup.</p>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill"></div>
-              </div>
-            </div>
-
-            <div class="skill-progress-card" data-level="52" style="--skill-color: #f5f5f5;">
-              <div class="skill-progress-head">
-                <span class="skill-progress-title"><i class="devicon-flask-original"></i>Flask</span>
-                <span class="skill-progress-value">52%</span>
-              </div>
-              <p class="skill-progress-note">Beginner backend routing, templates, and lightweight Python web projects.</p>
-              <div class="skill-progress-track">
-                <div class="skill-progress-fill"></div>
-              </div>
-            </div>
-
-            <div class="skill-progress-card" data-level="51" style="--skill-color: #339933;">
-              <div class="skill-progress-head">
-                <span class="skill-progress-title"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
-                <span class="skill-progress-value">51%</span>
-              </div>
-              <p class="skill-progress-note">Learning server-side basics, packages, and simple JavaScript runtime workflows.</p>
+              <!-- <p class="skill-progress-note">Business websites, customization, content management, and WooCommerce setup.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -343,7 +336,7 @@
                 <span class="skill-progress-title"><i class="devicon-github-original colored"></i>GitHub</span>
                 <span class="skill-progress-value">78%</span>
               </div>
-              <p class="skill-progress-note">Version control, repository workflow, and clean collaboration for project delivery.</p>
+              <!-- <p class="skill-progress-note">Version control, repository workflow, and clean collaboration for project delivery.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -354,7 +347,7 @@
                 <span class="skill-progress-title"><i class="devicon-netlify-plain colored"></i>Netlify</span>
                 <span class="skill-progress-value">68%</span>
               </div>
-              <p class="skill-progress-note">Fast deployment workflows for static websites, previews, and smooth hosting setup.</p>
+              <!-- <p class="skill-progress-note">Fast deployment workflows for static websites, previews, and smooth hosting setup.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
@@ -365,22 +358,46 @@
                 <span class="skill-progress-title"><i class="devicon-vercel-original"></i>Vercel</span>
                 <span class="skill-progress-value">66%</span>
               </div>
-              <p class="skill-progress-note">Modern frontend deployment, quick publishing, and performance-friendly hosting setup.</p>
+              <!-- <p class="skill-progress-note">Modern frontend deployment, quick publishing, and performance-friendly hosting setup.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
             </div>
-
+            
             <div class="skill-progress-card" data-level="72" style="--skill-color: #F24E1E;">
               <div class="skill-progress-head">
                 <span class="skill-progress-title"><i class="devicon-figma-plain colored"></i>Figma</span>
                 <span class="skill-progress-value">72%</span>
               </div>
-              <p class="skill-progress-note">Wireframing, layout planning, and translating interface ideas into usable designs.</p>
+              <!-- <p class="skill-progress-note">Wireframing, layout planning, and translating interface ideas into usable designs.</p> -->
               <div class="skill-progress-track">
                 <div class="skill-progress-fill"></div>
               </div>
             </div>
+
+            <div class="skill-progress-card" data-level="52" style="--skill-color: #f5f5f5;">
+              <div class="skill-progress-head">
+                <span class="skill-progress-title"><i class="devicon-flask-original"></i>Flask</span>
+                <span class="skill-progress-value">52%</span>
+              </div>
+              <!-- <p class="skill-progress-note">Beginner backend routing, templates, and lightweight Python web projects.</p> -->
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-card" data-level="51" style="--skill-color: #339933;">
+              <div class="skill-progress-head">
+                <span class="skill-progress-title"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+                <span class="skill-progress-value">51%</span>
+              </div>
+              <!-- <p class="skill-progress-note">Learning server-side basics, packages, and simple JavaScript runtime workflows.</p> -->
+              <div class="skill-progress-track">
+                <div class="skill-progress-fill"></div>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -625,13 +642,13 @@
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-kicker">Contact</span>
-          <h2 class="section-title">Let's Work Together</h2>
+          <h2 class="section-title">Contact Information</h2>
           <p class="section-subtitle">Ready to build something modern, useful, and beautifully crafted for the web.</p>
         </div>
 
         <div class="contact-container">
           <div class="contact-message reveal">
-            <h2>Let's <span>work together!</span></h2>
+            <h2>Let's <span>Connect</span></h2>
             <p>
               I design modern, user-friendly websites and bring ideas to life
               with clean, functional code. Let's collaborate to turn your vision

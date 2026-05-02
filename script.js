@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
-      preloader.style.opacity = "0";
-      setTimeout(() => { preloader.style.display = "none"; }, 500);
+      preloader.classList.add("is-hidden");
+      setTimeout(() => { preloader.style.display = "none"; }, 550);
     }, 500);
   });
 
@@ -108,28 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const fill = card.querySelector(".skill-progress-fill");
     const value = card.querySelector(".skill-progress-value");
     const target = Number(card.dataset.level);
-    const duration = 1800;
-    const startTime = performance.now();
 
-    const easeOutQuart = (progress) => 1 - Math.pow(1 - progress, 4);
-
-    const updateBar = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easedProgress = easeOutQuart(progress);
-      const currentValue = Math.round(target * easedProgress);
-
+    if (fill && Number.isFinite(target)) {
       fill.style.width = `${target}%`;
-      value.textContent = `${currentValue}%`;
+    }
 
-      if (progress < 1) {
-        requestAnimationFrame(updateBar);
-      } else {
-        value.textContent = `${target}%`;
-      }
-    };
-
-    requestAnimationFrame(updateBar);
+    if (value && Number.isFinite(target)) {
+      value.textContent = `${target}%`;
+    }
   };
 
   const skillBarsObserver = new IntersectionObserver(
@@ -149,13 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
   skillProgressCards.forEach((card) => {
     const fill = card.querySelector(".skill-progress-fill");
     const value = card.querySelector(".skill-progress-value");
+    const target = Number(card.dataset.level);
 
     if (fill) {
       fill.style.width = "0%";
     }
 
     if (value) {
-      value.textContent = "0%";
+      value.textContent = Number.isFinite(target) ? `${target}%` : value.textContent;
     }
 
     skillBarsObserver.observe(card);
